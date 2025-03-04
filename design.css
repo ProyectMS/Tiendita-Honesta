@@ -1,0 +1,236 @@
+/* --- Estilos generales --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Contenedor principal --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- Encabezado --- */
+header {
+    background: linear-gradient(45deg, #ffc3bb, #ff6d6d);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* --- Contenido principal --- */
+.contenido {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Imágenes --- */
+img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; 
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.logo2 {
+    max-width: 80px;
+    justify-content: center;
+
+}
+
+.logo-principal {
+    max-width: 500px;
+
+}
+
+/* --- Sección de texto con imagen a la derecha --- */
+.principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.texto {
+    font-size: 18px;
+}
+
+.imagen-mesa img {
+    max-width: 100%;
+    border-radius: 10px;
+    
+}
+/* BOTONES */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff6969, #ffc5c3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de hover */
+button:hover {
+    background: linear-gradient(135deg, #ffc5c3, #ff6969);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de clic */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Efecto de luz sutil */
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.4s ease-in-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+
+div.ubi {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* MENSAJE FINAL */
+.contenedor-imagen {
+    position: relative;
+    width: 90%; /* La imagen ocupa el 90% del ancho de la pantalla */
+    max-width: 800px; /* Para que no sea demasiado grande en pantallas grandes */
+    margin: 20px auto; /* Centrar */
+}
+
+.contenedor-imagen img {
+    width: 100%; /* Se adapta al tamaño del contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px;
+    display: block; /* Elimina espacios raros */
+}
+
+.texto-superpuesto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(85, 4, 65);
+    padding: 10px 15px;
+    font-size: clamp(18px, 4vw, 24px); /* Se ajusta según el tamaño de pantalla */
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 80%; /* Para que no ocupe toda la imagen */
+}
+
+/* PANTALLAS CHICAS */
+@media (max-width: 600px) {
+    .contenedor-imagen {
+        width: 100%; /* PARA PANTALLAS CHICAS */
+    }
+
+    .texto-superpuesto {
+        font-size: 12px; /* CHIQUITO PA Q NO TAPE */
+        padding: 8px 12px;
+    }
+}
+
+
+/* --- Footer --- */
+footer {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    margin-top: auto; /* Para que se quede pegado abajo */
+}
+
+.footer-contenido {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* FOOTER TELEFONO CONTACTO */
+footer {
+    background: linear-gradient(125deg, #ffc294, #fe4e4e );
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-contenido {
+    max-width: 600px;
+    margin: auto;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.telefono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.telefono img {
+    width: 20px;
+    height: 20px;
+}
+
+.telefono a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.telefono a:hover {
+    text-decoration: underline;
+}
